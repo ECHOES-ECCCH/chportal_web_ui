@@ -57,7 +57,7 @@ $NOT_DOWNLOADABLE = {}
 # Bugsnag API key for monitoring exception
 #$BUGSNAG_API_KEY=
 
-# OAuth2 authentication
+# OAuth2 authentification
 $OMNIAUTH_PROVIDERS = {
   github: {
     client_id: 'CLIENT_ID',
@@ -164,7 +164,7 @@ $FRONT_NOTICE = ''
 # EX: $SITE_NOTICE = { :unique_key => 'Put your message here (can include <a href="/link">html</a> if you use single quotes).' }
 $SITE_NOTICE = {}
 
-$TERMS_AND_CONDITIONS_LINK = 'https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/terms-conditions-naDsDo2Zxq'
+$TERMS_AND_CONDITIONS_LINK = ''
 $CITE_ANNOTATOR = 'https://hal.science/hal-00492024'
 $ANNOTATOR_API_DOC = 'https://data.agroportal.lirmm.fr/documentation#nav_annotator'
 $CITE_RECOMMENDER = 'https://doi.org/10.1186/s13326-017-0128-y' 
@@ -173,39 +173,19 @@ $RESOURCE_TERM = ENV['RESOURCE_TERM'] || 'ontology'
 
 $HOME_PAGE_LOGOS = [
     {
-      img_src: 'logos/supports/numev.webp',
-      url: 'http://www.lirmm.fr/numev',
-      target: '_blank'
-    },
-    {
-      img_src: 'logos/supports/anr.webp',
-      url: 'https://anr.fr/en',
-      target: '_blank'
-    },
-    {
-      img_src: 'logos/supports/eu.webp',
+      img_src: 'logos/supports/EN_Logo.webp',
       url: 'https://commission.europa.eu/research-and-innovation_en',
       target: '_blank'
     },
     {
-      img_src: 'logos/collaboration/d2kab.webp',
-      url: 'http://d2kab.mystrikingly.com',
+      img_src: 'logos/collaboration/UKRI_Logo.webp',
+      url: 'https://www.ukri.org/',
       target: '_blank'
     },
     {
-      img_src: 'logos/collaboration/um_logo.webp',
-      url: 'https://www.umontpellier.fr/',
+      img_src: 'logos/collaboration/ECHOES_Logo.webp',
+      url: ' https://www.echoes-eccch.eu/',
       target: '_blank',
-    },
-    {
-      img_src: 'logos/collaboration/inrae.webp',
-      url: 'https://www.inrae.fr/enm',
-      target: '_blank'
-    },
-    {
-      img_src: 'logos/collaboration/stanford.webp',
-      url: 'https://www.stanford.edu',
-      target: '_blank'
     },
     {
       img_src: 'logos/collaboration/ontoportal.webp',
@@ -280,6 +260,14 @@ $PORTALS_INSTANCES = [
     apikey: "47a57aa3-7b54-4f34-b695-dbb5f5b7363e",
     color: '#349696',
     'light-color': '#EBF5F5',
+  },
+   {
+    name: 'CHPortal',
+    ui: 'https://chportal.culturalheritagecloud.eu',
+    api: 'https://data.chportal.culturalheritagecloud.eu',
+    apikey: "",
+    color: '#EFAF3B',
+    'light-color': '#FDF6E7',
   }
 ]
 
@@ -287,40 +275,34 @@ $PORTALS_INSTANCES = [
 $ONTOPORTAL_WEBSITE_LINK = "https://ontoportal.org/"
 $ONTOPORTAL_GITHUB_REPO = "https://github.com/ontoportal"
 
-$GITHUB_ISSUES = "https://github.com/agroportal/project-management/issues"
+$GITHUB_ISSUES = "https://github.com/ECHOES-ECCCH/chportal-echoes-web-ui/issues"
 $FOOTER_LINKS = {
   social: [
-    { logo: "social/people.svg", link: "https://github.com/orgs/agroportal/people" },
-    { logo: "social/github.svg", link: "https://github.com/agroportal" },
-    { logo: "social/twitter.svg", link: "https://twitter.com/lagroportal" },
+    { logo: "social/people.svg", link: "https://github.com/orgs/ECHOES-ECCCH/people" },
+    { logo: "social/github.svg", link: "https://github.com/ECHOES-ECCCH" },
     { logo: "json.svg", link: $REST_URL },
     { logo: "summary/sparql.svg", link: "#{$SPARQL_URL}"},
     { logo: "social/email.svg", link: "mailto:#{$ANNOUNCE_LIST}" },
   ],
   sections: {
     products: {
-      release_notes: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/release-notes-btKjZk5tU2",
-      api: "https://data.agroportal.lirmm.fr/",
-      tools: "/tools",
-      sparql: "https://sparql.agroportal.lirmm.fr/test/",
+      api: "https://data.chportal.culturalheritagecloud.eu",
+      sparql: "https://sparql.chportal.culturalheritagecloud.eu",
       ontoportal: $ONTOPORTAL_WEBSITE_LINK
     },
     support: {
-      contact_us: "https://#{$SITE}.lirmm.fr/feedback",
+      contact_us: "",
       documentation: "https://ontoportal.github.io/documentation/",
-      agro_documentation: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/public-documentation-QMpsC9aVBb",
       issues_and_requests: $GITHUB_ISSUES 
     },
     agreements: {
       terms: $TERMS_AND_CONDITIONS_LINK,
-      privacy_policy: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/terms-conditions-naDsDo2Zxq",
-      legal_notices: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/terms-conditions-naDsDo2Zxq"
+      privacy_policy: "",
+      legal_notices: ""
     },
     about: {
-      about_us: "https://github.com/agroportal/project-management",
-      team: "https://github.com/orgs/agroportal/people",
-      cite_us: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/publications-and-references-87tEoeoGKy",
-      acknowledgments: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/acknowledgments-15GdRXLQdm"
+      about_us: "https://github.com/ECHOES-ECCCH/chportal-echoes-web-ui",
+      team: "https://github.com/orgs/ECHOES-ECCCH/people"
     }
   }
 }

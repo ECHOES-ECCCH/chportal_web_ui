@@ -5,11 +5,7 @@ class MetadataExportController < ApplicationController
     @ontology = LinkedData::Client::Models::Ontology.find_by_acronym(params[:ontology]).first
     ontology_not_found(params[:ontology]) if @ontology.nil?
 
-    @submission_latest = if params[:submission_id].present?
-                          @ontology.explore.submissions({ include: 'all' }, params[:submission_id])
-                        else
-                          @ontology.explore.latest_submission(include: 'all')
-                        end
+    @submission_latest = @ontology.explore.latest_submission(include: 'all')
     @ontology_metadata = {}
     @ontology.to_hash.each do |k, v|
       @ontology_metadata[k] = v

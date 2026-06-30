@@ -12,8 +12,7 @@
       serverSide: Boolean,
       ordering: Boolean,
       ajaxUrl: String,
-      columns: Array,
-      showAll: Boolean
+      columns: Array
     }
 
     connect() {
@@ -26,10 +25,7 @@
           paging: this.pagingValue,
           ...(this.columnsValue?.length > 0 && { columns: this.columnsValue.map(name => ({ data: name })) }),
           info: false,
-          lengthMenu: this.showAllValue ? [
-            [10, 25, 50, 100, -1],
-            [10, 25, 50, 100, 'All']
-          ] : [
+          lengthMenu: [
             [10, 25, 50, 100],
             [10, 25, 50, 100]
           ],

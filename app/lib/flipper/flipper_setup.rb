@@ -1,6 +1,6 @@
 # app/lib/flipper_setup.rb
 module FlipperSetup
-  FEATURES = ["Agents", "SPARQL", "SIDEKIQ_UI"].freeze
+  FEATURES = ["Agents", "SPARQL"].freeze
 
   def self.configure!
     Flipper.configure do |config|

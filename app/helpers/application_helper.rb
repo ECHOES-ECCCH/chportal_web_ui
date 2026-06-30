@@ -44,10 +44,7 @@ module ApplicationHelper
     user = current_user rescue nil
     Flipper.enabled?('SPARQL', user) && $SPARQL_ENDPOINT_URL
   end
-  def sidekiq_enabled?
-    user = current_user rescue nil
-    Flipper.enabled?('SIDEKIQ_UI', user) && $SIDEKIQ_UI_URL
-  end
+
   def portal_name_from_uri(uri)
     URI.parse(uri).hostname.split('.').first
   end
@@ -392,10 +389,6 @@ module ApplicationHelper
     cleaned_path = path.chomp('/')
     # Reconstruct the cleaned URL
     "#{protocol}://#{cleaned_path}"
-  end
-
-  def sidekiq_ui_url
-    sidekiq_ui_url = $SIDEKIQ_UI_URL
   end
   
   def categories_browse_url(category)

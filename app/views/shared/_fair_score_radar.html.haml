@@ -1,3 +1,2 @@
-- id_prefix ||= "ont-fair"
-%canvas{id: "#{id_prefix}-criteria-scores-canvas", style:"display: block; box-sizing: border-box" ,
+%canvas#ont-fair-criteria-scores-canvas{style:"display: block; box-sizing: border-box" ,
     data: {labels: (data.nil? ? "[]" : data[:criteria][:labels]), scores: (data.nil? ? "[]" :data[:criteria][:normalizedScores])}}

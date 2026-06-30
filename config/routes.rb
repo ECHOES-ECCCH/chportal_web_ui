@@ -222,7 +222,6 @@ Rails.application.routes.draw do
   get '/ajax/fair_score/html' => 'fair_score#details_html'
   get '/ajax/submission/show_licenses/:id' => 'ontologies#show_licenses'
   get '/ajax/fair_score/json' => 'fair_score#details_json'
-  get '/ajax/fair_score/foops_json' => 'fair_score#foops_json'
   get '/ajax/ontologies', to: 'ontologies#ajax_ontologies'
   get '/ajax/agents', to: 'agents#ajax_agents'
   get '/ajax/agents/list', to: 'agents#ajax_agents_list'
@@ -244,7 +243,6 @@ Rails.application.routes.draw do
   get 'search', to: 'search#index'
   get 'search/json_search/:id', to: 'search#json_search'
   get 'ajax/search/ontologies/content', to: 'search#json_ontology_content_search'
-  get 'ajax/search/ontologies/:ontology_acronym/classes', to: 'search#json_ontology_classes_search'
 
   get 'check_resolvability' => 'check_resolvability#index'
   get 'check_url_resolvability' => 'check_resolvability#check_resolvability'

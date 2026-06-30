@@ -4,8 +4,5 @@
   %div.border-top
     %dl
       - @view_decorators.each do |view_decorator|
-        %dt
-          = link_to ontology_path(view_decorator.view.acronym) do
-            = view_decorator.view.name.to_s.upcase_first
-            %small= "(#{view_decorator.view.acronym})"
-        %dd= render TextAreaFieldComponent.new(value: view_decorator.description, lines: 3)
+        %dt= view_decorator.linked_name
+        %dd= view_decorator.description
