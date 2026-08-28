@@ -308,14 +308,15 @@ fr:
     negation: Négation
     ontology: Ontologie
     options: Options
-    sample_text: There has been many recent studies on the use of microbial antagonists
-      to control diseases incited by soilborne and airborne plant pathogenic bacteria
-      and fungi, in an attempt to replace existing methods of chemical control and
-      avoid extensive use of fungicides, which often lead to resistance in plant pathogens.
-      In agriculture, plant growth-promoting and biocontrol microorganisms have emerged
-      as safe alternatives to chemical pesticides. Streptomyces spp. and their metabolites
-      may have great potential as excellent agents for controlling various fungal
-      and bacterial phytopathogens.
+    sample_text: Les objets nous relient aux souvenirs et aux expériences. Ils possèdent des
+      histoires qui révèlent leurs relations avec des humains. Ainsi, les archéologues s'intéressent
+      au patrimoine matériel, en rassemblant d'innombrables découvertes archéologiques afin de 
+      préserver ce potentiel d'apprentissage à travers les histoires créées par ces objets pour les
+      générations actuelles et futures. L'archéologie dévoile ces histoires, en permettant aux objets
+      de raconter leur origines, leurs usages, et leurs évolutions. Cela permet de mieux comprendre la 
+      technologue, la vie quotidienne, les relations, l'environnement et l'histoire humaine. Les poteries
+      et les matériaux lithiques sont des formes répandues de traces archéologiques, détenant des 
+      informations cruciales.
     score: Score
     score_threshold: Filtrer par seuil de score
     select_ontologies: Sélectionner des ontologies
@@ -364,9 +365,9 @@ fr:
   check_resolvability:
     check_resolvability_message_1: 'L''URL est résolvable et supporte les formats
       suivants : %{supported_format}'
-    check_resolvability_message_2: 'L''URL est résolvable mais sont contenu n''est
+    check_resolvability_message_2: 'L''URL est résolvable mais son contenu n''est
       pas négociable, elle supporte uniquement : %{supported_format}'
-    check_resolvability_message_3: L'URL n'est pas résolvable et sont contenu n'est
+    check_resolvability_message_3: L'URL n'est pas résolvable et son contenu n'est
       pas négociable (elle retourne %{status}).
     content_negotiation:
       content: La négociation de contenu, dans le contexte du Web sémantique, fait
@@ -526,7 +527,7 @@ fr:
     see_possible_credits: Voir les crédits possibles
     see_the_used_properties: voir les propriétés utilisées
     view_fair_scores_definitions: 'Vous voyez le score d''évaluation de l''adéquation
-      avec les principes FAIR pour cette ontologie dans AgroPortal. Les scores FAIR
+      avec les principes FAIR pour cette ontologie dans %{portal}. Les scores FAIR
       sont calculés avec la méthodologie O''FAIRe. Plus de détails ici : https://github.com/agroportal/fairness'
   federation:
     check_status: Vérification de la disponibilité de %{portal}
@@ -591,13 +592,13 @@ fr:
     include_name: Veuillez inclure votre nom
     index:
       agents_tooltip: Top 5 des agents avec le plus d'utilisation d'ontologie.
-      tagline: Le foyer des ontologies et des artefacts sémantiques dans l'agroalimentaire
+      tagline: Le foyer des ontologies et des artefacts sémantiques dans le patrimoine culturel
         et les domaines connexes.
       title: Bienvenue sur %{site}
       welcome: Bienvenue sur %{site},
     individuals: Individus
     info_tooltip_text: 'Vous voyez les scores moyens pour toutes les ontologies publiques
-      dans AgroPortal. Les scores FAIR sont calculés avec la méthodologie O''FAIRe.
+      dans %{portal}. Les scores FAIR sont calculés avec la méthodologie O''FAIRe.
       Plus de détails ici : https://github.com/agroportal/fairness'
     mappings: Alignements
     max: Max
@@ -628,9 +629,9 @@ fr:
     see_details: Voir les détails
     slices_description: Les "slices" permettent aux utilisateurs d'interagir (à la
       fois via l'API ou l'interface utilisateur) uniquement avec un sous-ensemble
-      d'ontologies dans AgroPortal. Si vous parcourez une slice, toutes les fonctionnalités
+      d'ontologies dans %{portal}. Si vous parcourez une slice, toutes les fonctionnalités
       du portail seront limitées au sous-ensemble choisi; cela permet aux utilisateurs
-      de se concentrer sur leurs cas d'utilisation spécifiques. Sur AgroPortal, les
+      de se concentrer sur leurs cas d'utilisation spécifiques. Sur %{portal}, les
       slices et les groupes sont synchronisés, de sorte que chaque groupe a une slice
       correspondante affichant uniquement les ontologies de ce groupe.
     suggest_slice: Proposer un nouveau groupe/slice
@@ -1020,7 +1021,7 @@ fr:
     browser:
       admin_welcome: Bienvenue admin, cette couleur indique les fonctionnalités réservées
         aux administrateurs
-      search_placeholder: Filtrer les ontologies, e.g., AGROVOC, plante
+      search_placeholder: Filtrer les ontologies, e.g., CIDOC CRM, AAT
       show_my_ontologies: Afficher mes ontologies seulement
       show_ontology_views: Afficher les vues de l'ontologie
       show_public_ontology: Afficher seulement les ontologies publiques
@@ -1085,7 +1086,7 @@ fr:
         'rewrite' est activé en exécutant la commande `sudo a2enmod rewrite`
     htaccess_redirection_description: Nous proposons une solution transparente pour
       rendre les URI de votre ontologie résolubles et le contenu négociable en autorisant
-      la redirection d'URL de vos URI d'ontologie vers nos URI d'Agroportal. Pour
+      la redirection d'URL de vos URI d'ontologie vers nos URI de %{portal}. Pour
       faciliter ce processus, nous vous avons fourni un ensemble de règles de réécriture
       .htaccess. En suivant les instructions simples ci-dessous, vous serez en mesure
       de mettre en œuvre ces règles rapidement et efficacement, garantissant ainsi
@@ -1153,10 +1154,9 @@ fr:
         l'ontologie de la dernière version de l'ontologie.
       average_number_of_children: Nombre moyen d'enfants
       can_also_view: Vous pouvez également voir une
-      class_name_description: mettez le nom préféré de la classe (par exemple, "Common
-        Neoplasm");
+      class_name_description: mettez le nom préféré de la classe (par exemple, "Built Work");
       class_shortid_description: mettez l'identifiant court de la classe, tel qu'utilisé
-        dans %{site} (par exemple, "Common_Neoplasm");
+        dans %{site} (par exemple, "B1_Built_Work");
       class_uri_description: Indiquez l'URI complet de la classe (par exemple,
       class_uri_example: mettez l’URI complet de la classe (par exemple, %{link})
       classes: Classes
@@ -1562,7 +1562,7 @@ fr:
       more_from_ontology: de plus sur cette ontologie
       reuses_in: Réutilisé dans
       visualize: Visualiser
-    search_place_holder: Entrez un terme, e.g., hauteur de plante
+    search_place_holder: Entrez un terme, e.g., rapport de fouille
     show_advanced_options: Afficher les options
   show_advanced_options: Afficher les options avancées
   statistics:
@@ -1663,9 +1663,8 @@ fr:
       avec des catégories. Typiquement, les groupes associent des ontologies provenant
       du même projet ou de la même organisation pour une meilleure identification
       de la provenance. Tandis que les catégories concernent des sujets/thématiques
-      et permettent de classifier les ontologies. En 2016, les catégories d'%{portal}
-      ont été établies en coopération avec FAO AIMS. En 2024, nous sommes passés au
-      Thésaurus de l'UNESCO (https://vocabularies.unesco.org). Les groupes et les
+      et permettent de classifier les ontologies. Dans %{portal} les catégories sont 
+      choisis dans le Thésaurus de l'UNESCO (https://vocabularies.unesco.org). Les groupes et les
       catégories, ainsi que d'autres métadonnées, peuvent être utilisés sur la page
       “Parcourir” d'%{portal} pour filtrer la liste des ontologies.
     groups_and_categories: Groupes et Catégories

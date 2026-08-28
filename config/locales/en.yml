@@ -300,14 +300,13 @@ en:
     negation: Negation
     ontology: Ontology
     options: Options
-    sample_text: There has been many recent studies on the use of microbial antagonists
-      to control diseases incited by soilborne and airborne plant pathogenic bacteria
-      and fungi, in an attempt to replace existing methods of chemical control and
-      avoid extensive use of fungicides, which often lead to resistance in plant pathogens.
-      In agriculture, plant growth-promoting and biocontrol microorganisms have emerged
-      as safe alternatives to chemical pesticides. Streptomyces spp. and their metabolites
-      may have great potential as excellent agents for controlling various fungal
-      and bacterial phytopathogens.
+    sample_text: Objects connect us to memories and experiences. They possess biographies that 
+     reveal their human relationships. This is why archaeologists focus on material culture, 
+     gathering countless archaeological finds to preserve what we can learn and the stories they 
+     create for current and future generations. Archaeology unlocks these stories, enabling objects 
+     to speak about their origins, uses, and evolution. They offer insights into technology, 
+     daily life, relationships, the environment, and human history. Pottery and lithics are 
+     common forms of archaeological evidence, holding crucial information. 
     score: Score
     score_threshold: Filter by score threshold
     select_ontologies: Select ontologies
@@ -354,7 +353,7 @@ en:
     submit: Submit
     type: Type
   check_resolvability:
-    check_resolvability_message_1: 'The URL is resolvable and support the following
+    check_resolvability_message_1: 'The URL is resolvable and supports the following
       formats: %{supported_format}'
     check_resolvability_message_2: 'The URL is resolvable but is not content negotiable,
       it supports only: %{supported_format}'
@@ -513,7 +512,7 @@ en:
     see_possible_credits: See possible credits
     see_the_used_properties: see the used properties
     view_fair_scores_definitions: 'You are seeing the FAIRness assessment score for
-      this ontology in AgroPortal. FAIR scores are computed with the O''FAIRe methodology.
+      this ontology in %{portal}. FAIR scores are computed with the O''FAIRe methodology.
       More details here: https://github.com/agroportal/fairness'
   federation:
     check_status: Checking %{portal} availability
@@ -577,13 +576,13 @@ en:
     include_name: Please include your name
     index:
       agents_tooltip: Top 5 agents with the highest ontology usage
-      tagline: The home of ontologies and semantic artefacts in agri-food and related
+      tagline: The home of ontologies and semantic artefacts in cultural heritage and related
         domains.
       title: Welcome to %{site}
       welcome: Welcome to %{site},
     individuals: Individuals
     info_tooltip_text: 'You are seing the average scores for all the public ontologies
-      in AgroPortal. FAIR scores are computed with the O''FAIRe methodology. More
+      in %{portal}. FAIR scores are computed with the O''FAIRe methodology. More
       details here: https://github.com/agroportal/fairness'
     mappings: Mappings
     max: Max
@@ -612,9 +611,9 @@ en:
     recommender_annotator: Recommender and Annotator
     see_details: See details
     slices_description: Slices allow users to interact (both via API or UI) only with
-      a subset of ontologies in AgroPortal. If browsing the slice, all the portal
+      a subset of ontologies in %{portal}. If browsing the slice, all the portal
       features will be restricted to the chosen subset, enabling users to focus on
-      their specific use cases. On AgroPortal, slices and groups are synchronized,
+      their specific use cases. On %{portal}, slices and groups are synchronized,
       so every group has a corresponding slice displaying only the ontologies from
       that group.
     suggest_slice: Suggest a new group/slice
@@ -986,7 +985,7 @@ en:
     allow_users: Allow users to view the metadata of your ontology (Summary) only.
     browser:
       admin_welcome: Welcome admin,this coloring indicates admin-only features
-      search_placeholder: Filter ontologies, e.g., AGROVOC, plant
+      search_placeholder: Filter ontologies, e.g., CIDOC CRM, AAT
       show_my_ontologies: Show my ontologies only
       show_ontology_views: Show ontology views
       show_public_ontology: Show public ontology only
@@ -1052,7 +1051,7 @@ en:
         is enabled by running the command `sudo a2enmod rewrite`
     htaccess_redirection_description: We offer a seamless solution to make your ontology
       URIs resolvable and content negotiable by allowing URL redirection for your
-      ontology URIs to our Agroportal URIs. To facilitate this process, we've provided
+      ontology URIs to our %{portal} URIs. To facilitate this process, we've provided
       you with a set of .htaccess rewrite rules. By following the simple instructions
       below, you'll be able to implement these rules swiftly and efficiently, ensuring
       smooth redirection
@@ -1117,9 +1116,9 @@ en:
         from the latest version of the ontology.
       average_number_of_children: Average number of children
       can_also_view: You can also view a
-      class_name_description: put the preferred name of the class (e.g., "Common Neoplasm");
+      class_name_description: put the preferred name of the class (e.g., "Built Work");
       class_shortid_description: put the short id of the class, as used in %{site}
-        (e.g., "Common_Neoplasm");
+        (e.g., "B1_Built_Work");
       class_uri_description: Put the complete URI of the class (e.g.,
       class_uri_example: put the complete URI of the class (e.g., %{link})
       classes: Classes
@@ -1512,7 +1511,7 @@ en:
       more_from_ontology: more from this ontology
       reuses_in: Reuses in
       visualize: Vizualize
-    search_place_holder: Enter a term, e.g., plant height
+    search_place_holder: Enter a term, e.g., excavation report
     show_advanced_options: Show options
   show_advanced_options: Show advanced options
   statistics:
@@ -1533,7 +1532,7 @@ en:
     deprecated_help: An ontology with status retired shall necessarily be also deprecated, but not the opposite.
     edit_metadata_instruction: Edit the metadata of your ontology here. Some of these
       values are used by %{portal_name} functionalities, including for FAIRness assessment.
-      %{link)
+      %{link}
     edit_metadata_instruction_link: See guidelines and recommendations for metadata
       here.
     edit_ontology_title: Edit ontology
@@ -1614,9 +1613,8 @@ en:
     description: '"In %{portal}, ontologies are organized in groups and tagged with
       categories. Typically, groups associate ontologies from the same project or
       organization for better identification of the provenance. Whereas categories
-      are about subjects/topics and enable to classify ontologies. As of 2016, %{portal}''s
-      categories were established in cooperation with FAO AIMS. In 2024, we moved
-      to UNESCO Thesaurus (https://vocabularies.unesco.org). Groups and categories,
+      are about subjects/topics and enable to classify ontologies. The %{portal}''s
+      categories are chosen according to the UNESCO Thesaurus (https://vocabularies.unesco.org). Groups and categories,
       along with other metadata, can be used on the “Browse” page of %{portal} to
       filter out the list of ontologies."'
     groups_and_categories: Groups and Categories
