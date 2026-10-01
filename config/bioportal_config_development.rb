@@ -37,7 +37,6 @@ $API_KEY = ENV['API_KEY']
 # BioPortal API service address
 $REST_URL = ENV['API_URL']
 
-
 $SPARQL_ENDPOINT_URL = ENV['SPARQL_ENDPOINT_URL'] || nil
 
 $SIDEKIQ_UI_URL = ENV['SIDEKIQ_UI_URL'] || $REST_URL + "sidekiq"
@@ -138,8 +137,6 @@ $SUPPORT_EMAIL = ENV['SUPPORT_EMAIL']
 # Email used to send notifications
 $NOTIFICATION_EMAIL = ENV['SUPPORT_EMAIL']
 
-
-
 # reCAPTCHA
 # In order to use reCAPTCHA on the account creation and feedback submission pages:
 #    1. Obtain a reCAPTCHA v2 key from: https://www.google.com/recaptcha/admin
@@ -174,7 +171,7 @@ $FRONT_NOTICE = ''
 # EX: $SITE_NOTICE = { :unique_key => 'Put your message here (can include <a href="/link">html</a> if you use single quotes).' }
 $SITE_NOTICE = {}
 
-$TERMS_AND_CONDITIONS_LINK = 'https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/terms-conditions-naDsDo2Zxq'
+$TERMS_AND_CONDITIONS_LINK = ''
 $CITE_ANNOTATOR = 'https://hal.science/hal-00492024'
 $ANNOTATOR_API_DOC = 'https://data.agroportal.lirmm.fr/documentation#nav_annotator'
 $CITE_RECOMMENDER = 'https://doi.org/10.1186/s13326-017-0128-y' 
@@ -183,39 +180,19 @@ $RESOURCE_TERM = ENV['RESOURCE_TERM'] || 'ontology'
 
 $HOME_PAGE_LOGOS = [
     {
-      img_src: 'logos/supports/numev.webp',
-      url: 'http://www.lirmm.fr/numev',
-      target: '_blank'
-    },
-    {
-      img_src: 'logos/supports/anr.webp',
-      url: 'https://anr.fr/en',
-      target: '_blank'
-    },
-    {
-      img_src: 'logos/supports/eu.webp',
+      img_src: 'logos/supports/EN_Logo.webp',
       url: 'https://commission.europa.eu/research-and-innovation_en',
       target: '_blank'
     },
     {
-      img_src: 'logos/collaboration/d2kab.webp',
-      url: 'http://d2kab.mystrikingly.com',
+      img_src: 'logos/collaboration/UKRI_Logo.webp',
+      url: 'https://www.ukri.org/',
       target: '_blank'
     },
     {
-      img_src: 'logos/collaboration/um_logo.webp',
-      url: 'https://www.umontpellier.fr/',
+      img_src: 'logos/collaboration/ECHOES_Logo.webp',
+      url: 'https://www.echoes-eccch.eu/',
       target: '_blank',
-    },
-    {
-      img_src: 'logos/collaboration/inrae.webp',
-      url: 'https://www.inrae.fr/enm',
-      target: '_blank'
-    },
-    {
-      img_src: 'logos/collaboration/stanford.webp',
-      url: 'https://www.stanford.edu',
-      target: '_blank'
     },
     {
       img_src: 'logos/collaboration/ontoportal.webp',
@@ -224,131 +201,46 @@ $HOME_PAGE_LOGOS = [
     }
 ]
 
-$PORTALS_INSTANCES = [
-  {
-    name: 'AgroPortal',
-    api: 'https://data.agroportal.lirmm.fr',
-    ui: 'https://agroportal.lirmm.fr/',
-    color: '#3CB371',
-    apikey: '1de0a270-29c5-4dda-b043-7c3580628cd5',
-    'light-color': '#F1F6FA',
-  },
-  {
-    name: 'BioPortal',
-    ui: 'https://bioportal.bioontology.org/',
-    api: 'https://data.bioontology.org/',
-    apikey: '8b5b7825-538d-40e0-9e9e-5ab9274a9aeb',
-    color: '#234979',
-    'light-color': '#E9F2FA',
-  },
-  {
-    name: 'SIFR BioPortal',
-    ui: 'https://bioportal.lirmm.fr/',
-    api: 'https://data.bioportal.lirmm.fr/',
-    apikey: '1de0a270-29c5-4dda-b043-7c3580628cd5',
-    color: '#74a9cb',
-    'light-color': '#E9F2FA',
-  },
-  {
-    name: 'EcoPortal',
-    ui: 'https://ecoportal.lifewatch.eu/',
-    api: 'https://data.ecoportal.lifewatch.eu/',
-    apikey: "43a437ba-a437-4bf0-affd-ab520e584719",
-    color: '#2076C9',
-    'light-color': '#E9F2FA',
-  },
-  {
-    name: 'MedPortal',
-    ui: 'http://medportal.bmicc.cn/',
-    color: '#234979',
-  },
-  {
-    name: 'MatPortal',
-    ui: 'https://matportal.org/',
-    color: '#009574',
-  },
-  {
-    name: 'IndustryPortal',
-    ui: 'http://industryportal.enit.fr',
-    api: 'https://data.industryportal.enit.fr/',
-    apikey: '019adb70-1d64-41b7-8f6e-8f7e5eb54942',
-    color: '#1c0f5d',
-    'light-color': '#F0F5F6',
-  },
-  {
-    name: 'EarthPortal',
-    ui: 'https://earthportal.eu/',
-    api: 'https://data.earthportal.eu/',
-    apikey: "c9147279-954f-41bd-b068-da9b0c441288",
-    color: '#404696',
-    'light-color': '#F0F5F6'
-  },
-  {
-    name: 'TestPortal',
-    ui: 'https://testportal.lirmm.fr/',
-    api: 'https://data.testportal.lirmm.fr/',
-    color: '#74a9cb',
-    apikey: '1de0a270-29c5-4dda-b043-7c3580628cd5',
-  },
-  {
-    name: 'BiodivPortal',
-    ui: 'https://biodivportal.gfbio.org/',
-    api: 'https://data.biodivportal.gfbio.org/',
-    apikey: "47a57aa3-7b54-4f34-b695-dbb5f5b7363e",
-    color: '#349696',
-    'light-color': '#EBF5F5',
-  }
-]
-
-
 $ONTOPORTAL_WEBSITE_LINK = "https://ontoportal.org/"
 $ONTOPORTAL_GITHUB_REPO = "https://github.com/ontoportal"
 
-$GITHUB_ISSUES = "https://github.com/agroportal/project-management/issues"
+$GITHUB_ISSUES = "https://github.com/ECHOES-ECCCH/chportal_web_ui/issues"
 $FOOTER_LINKS = {
   social: [
-    { logo: "social/people.svg", link: "https://github.com/orgs/agroportal/people" },
-    { logo: "social/github.svg", link: "https://github.com/agroportal" },
-    { logo: "social/twitter.svg", link: "https://twitter.com/lagroportal" },
+    { logo: "social/people.svg", link: "https://github.com/orgs/ECHOES-ECCCH/people" },
+    { logo: "social/github.svg", link: "https://github.com/ECHOES-ECCCH" },
     { logo: "json.svg", link: $REST_URL },
     { logo: "summary/sparql.svg", link: "#{$SPARQL_URL}"},
     { logo: "social/email.svg", link: "mailto:#{$ANNOUNCE_LIST}" },
   ],
   sections: {
     products: {
-      release_notes: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/release-notes-btKjZk5tU2",
-      api: "https://data.agroportal.lirmm.fr/",
-      tools: "/tools",
-      sparql: "https://sparql.agroportal.lirmm.fr/test/",
+      api: "https://data.chportal.culturalheritagecloud.eu",
+      sparql: "https://sparql.chportal.culturalheritagecloud.eu",
       ontoportal: $ONTOPORTAL_WEBSITE_LINK
     },
     support: {
-      contact_us: "https://#{$SITE}.lirmm.fr/feedback",
+      contact_us: "",
       documentation: "https://ontoportal.github.io/documentation/",
-      agro_documentation: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/public-documentation-QMpsC9aVBb",
       issues_and_requests: $GITHUB_ISSUES 
     },
     agreements: {
       terms: $TERMS_AND_CONDITIONS_LINK,
-      privacy_policy: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/terms-conditions-naDsDo2Zxq",
-      legal_notices: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/terms-conditions-naDsDo2Zxq"
+      privacy_policy: "",
+      legal_notices: ""
     },
     about: {
-      about_us: "https://github.com/agroportal/project-management",
-      team: "https://github.com/orgs/agroportal/people",
-      cite_us: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/publications-and-references-87tEoeoGKy",
-      acknowledgments: "https://doc.jonquetlab.lirmm.fr/share/e6158eda-c109-4385-852c-51a42de9a412/doc/acknowledgments-15GdRXLQdm"
+      about_us: "https://github.com/ECHOES-ECCCH/chportal_web_ui",
+      team: "https://github.com/orgs/ECHOES-ECCCH/people"
     }
   }
 }
-
-
 
 # Monitoring
 $SENTERY_DSN = ENV['SENTRY_DSN'] # if you want to use sentery.io
 $NEW_RELIC_LICENSE_KEY = ENV['NEW_RELIC_LICENSE_KEY'] # if you want to use newrelic.io
 
-$UI_THEME = ENV['UI_THEME'] || 'ontoportal'
+$UI_THEME = ENV['UI_THEME'] || 'chportal'
 $HOSTNAME = ENV['API_URL']
 
 if $HOSTNAME
