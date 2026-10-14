@@ -2,6 +2,8 @@ require 'open-uri'
 require 'nokogiri'
 
 module HomeHelper
+  PORTAL_LOGO = 'logo-white.svg'.freeze
+  ONTOPORTAL_LOGO = 'logos/ontoportal.svg'.freeze
 
   def render_footer_link(options = {})
     link_content = options[:text][I18n.locale] || options[:text][:en] if options[:text]
@@ -57,6 +59,11 @@ module HomeHelper
     ontoportal_link = link_to("(#{$ONTOPORTAL_WEBSITE_LINK})", $ONTOPORTAL_WEBSITE_LINK, target: '_blank')
     github_link = link_to("(#{$ONTOPORTAL_GITHUB_REPO})", $ONTOPORTAL_GITHUB_REPO, target: '_blank')
     content_tag(:div, t('home.ontoportal_description', ontoportal_link: ontoportal_link, github_link: github_link).html_safe, style: "margin-bottom: 20px")
+  end
+
+  # Own logo for the current portal, generic OntoPortal logo for the others
+  def instance_logo(portal)
+    portal.casecmp?(portal_name.to_s) ? PORTAL_LOGO : ONTOPORTAL_LOGO
   end
 
 
